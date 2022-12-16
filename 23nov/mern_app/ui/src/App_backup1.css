@@ -1,0 +1,36 @@
+#container
+{
+  height:668px;
+  width:100%;
+}
+#header
+{
+  height:23%;
+  background-color:orange;
+}
+#nav
+{
+  height:7%;
+  background-color:brown;
+}
+#content
+{
+  height:55%;
+}
+#main
+{
+  height:100%;
+  width:65%;
+  float:left;
+}
+#sidebar
+{
+  height:100%;
+  width:35%;
+  float:right;
+}
+#footer
+{
+  height:15%;
+  background-color:orange;
+}

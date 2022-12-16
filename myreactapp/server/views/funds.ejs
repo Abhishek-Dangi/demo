@@ -1,0 +1,54 @@
+<%- include("usernav.ejs")%>
+    <!--about page load-->
+
+    <!--login from start -->
+
+    <div class="row , about-search">
+        <div class="col-1"></div>
+        <div class="col-6 mb-5" id="register_from">
+            <h2>Login here!!</h2>
+            <font style="color:blue; font-weight: 800; font-size: 16px;">
+                <%- output %>
+            </font>
+            <form method="post" action="/login">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                </div>
+
+                <div class="mb-3">
+                    <label for="pwd" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="pwd" name="password">
+                </div>
+
+                <div class="mb-3">
+                    <input type="checkbox" id="chk" name="chk" value="remember">
+                    <label>Remember me?</label>
+                </div>
+                <input type="hidden" name="business" value=<%- paypalID %>>
+
+                <!-- Specify a Buy Now button. -->
+                <input type="hidden" name="cmd" value="_xclick">
+
+                <!-- Specify details about the item that buyers will purchase. -->
+                <input type="hidden" name="item_name" value="funds">
+                <!--<input type="hidden" name="item_number" value=1>-->
+                <input type="hidden" name="amount" value=<%- amount %>>
+                <input type="hidden" name="currency_code" value="USD">
+
+                <!-- Specify URLs -->
+                <input type='hidden' name='cancel_return' value="http://localhost:3000/user/cancel/">
+                <input type='hidden' name='return'
+                    value="http://localhost:3000/user/payment/?amount=<%- amount %>&uid=<%- sunm %>">
+
+                <button type="submit" class="btn btn-success">Login</button>
+            </form>
+
+        </div>
+
+    </div>
+
+    <!--login from end -->
+
+    <!--footer .-->
+    <%- include("userfooter.ejs")%>

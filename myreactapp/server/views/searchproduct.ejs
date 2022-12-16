@@ -1,0 +1,51 @@
+<!-- end loader -->
+<%- include("usernav.ejs")%>
+    <!--about page load-->
+    <!-- about  -->
+
+    <div id="about" class="about-search">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                    <div class="about-box container p-5">
+                        <style>
+                            #cat_main {
+                                height: auto;
+                                width: 600px;
+                            }
+
+                            #cat_part {
+                                height: 150px;
+                                width: 200px;
+                                float: left;
+                            }
+                        </style>
+
+                        <p>Catogery</p>
+                        <center>
+                            <div id="cat_main" class="mt-5">
+                                <% for(let row of clist){%>
+                                    <a href="/user/viewsubcategory/<%- row.catname%>">
+                                        <div id="cat_part">
+                                            <img src="../uploads/categoryicons/<%-row.caticonname%>" height="100px"
+                                                width="100px" />
+                                            <br />
+                                            <b>
+                                                <%- row.catname%>
+                                            </b>
+                                        </div>
+                                    </a>
+                                    <% }%>
+                            </div>
+
+                        </center>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- end abouts -->
+
+    <!--footer .-->
+    <%- include("userfooter.ejs")%>

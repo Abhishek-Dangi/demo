@@ -1,0 +1,11 @@
+#catmain
+{
+ min-height:300px;
+ width:600px;
+}
+.catpart
+{
+ height:150px;
+ width:200px;
+ float:left;    
+}

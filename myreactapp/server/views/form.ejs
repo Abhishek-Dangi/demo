@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title></title>
+    <script src="js/valid.js"></script>
+    <style>
+        #contain {
+            border: 1px solid black;
+            align-items: center;
+            height: 450px;
+            width: 350px;
+            background-color: rgb(183, 175, 175);
+        }
+    </style>
+</head>
+
+<body onload="init()">
+
+    <div id="contain">
+        <h3>Google form</h3>
+        <label for="name">Name</label><br>
+        <input type="text" id="name" placeholder="enter name" onblur="valid()">
+        <span id="err1"></span>
+        <br><br>
+        <label for="username">userName</label><br>
+        <input type="text" id="username" placeholder="enter username" onblur="valid()">
+        <span id="err2"></span>
+        <br><br>
+        <label for="pass">Password</label><br>
+        <input type="text" id="pass" placeholder="enter pass" onkeyup="valid()">
+        <span id="err3"></span>
+        <br><br>
+        <label for="cpas">cpass</label><br>
+        <input type="text" id="cpass" placeholder="re-enter Password" onkeyup="cheakpass()">
+        <span id="err4"></span>
+        <br><br>
+        <label for="mobile">Mobile</label><br>
+        <input type="text" id="mobile" placeholder="enter mobile" onkeyup="valid()">
+        <span id="err5"></span>
+        <br><br>
+        <label for="">Email</label> <br>
+        <input id="email" placeholder="Enter email" onkeyup="valid()">
+        <span id="err6"></span><br><br>
+        <input type="button" value="save" onclick="valid()">
+    </div>
+
+</body>
+
+</html>

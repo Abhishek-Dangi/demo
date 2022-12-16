@@ -1,0 +1,50 @@
+<%- include("adminnav.ejs")%>
+    <!--about page load-->
+
+    <!--login from start -->
+
+    <div class="row , about">
+        <div class="col-1"></div>
+        <div class="col-6 pt-5 mb-5" id="addsubcategory">
+            <h2>Add Sub Category here!! </h2>
+            <font style=" color:blue; font-weight: 800; font-size: 16px;">
+                <%- output %>
+            </font>
+            <form method="post" action="/admin/addsubcategory" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="catname">Category Name:</label>
+                    <select class="form-control" id="catname" name="catname">
+                        <option>Select Category</option>
+                        <% for(let row of clist){ %>
+                            <p>
+                                <option>
+                                    <%- row.catname %>
+                                </option>
+                            </p>
+                            <% } %>
+
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="subcatname" class="form-label">Sub Category Name:</label>
+                    <input type="text" class="form-control" id="subcatname" name="subcatname">
+                </div>
+
+                <div class="mb-3">
+                    <label for="caticon" class="form-label">Sub Category Icon:</label>
+                    <input type="file" class="form-control" id="caticon" name="caticon">
+                    <span id="err3"></span>
+                </div>
+
+                <button type="submit" class="btn btn-success">Add Category
+                </button>
+            </form>
+
+        </div>
+
+    </div>
+
+    <!--login from end -->
+
+    <!--footer .-->
+    <%- include("adminfooter.ejs")%>

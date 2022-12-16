@@ -1,0 +1,70 @@
+<!-- <%- include("nav.ejs")%>
+    <%- include("header.ejs")%>
+        <!--about page load-->
+<!-- about  -->
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-6" id="register_from">
+        <h2>HTML Forms</h2>
+        <font style="color:blue; font-weight: 800; font-size: 16px;">
+            <%- output %>
+        </font>
+        <form method="post" action="/register">
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input onblur="valid()" type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+                <span id="err1"></span>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+                <span id="err2"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="pwd" class="form-label">Password</label>
+                <input type="password" class="form-control" id="pwd" name="password" placeholder="enter password">
+                <span id="err3"></span>
+            </div>
+            <div class="mb-3">
+                <label for="mobile" class="form-label">Mobile</label>
+                <input type="text" class="form-control" id="mobile" name="mobile" placeholder="enter mobile">
+                <span id="err4"></span>
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label">address</label>
+                <textarea class="form-control" name="address" id="address" rows="3"></textarea>
+                <span id="err5"></span>
+            </div>
+            <div>
+                <label for="city">City:</label>
+                <select class="form-control" id="city" name="city" aria-label="Default select example">
+                    <option selected>Select City</option>
+                    <option>Pune</option>
+                    <option>Indore</option>
+                    <option>Dewas</option>
+                    <option>Bhopal</option>
+                </select>
+            </div>
+            <div>
+                <label for="check">Gender:</label>&nbsp;&nbsp;
+                <input type="radio" name="gender" id="male" value="male">Male
+                &nbsp;&nbsp;
+                <input type="radio" name="gender" id="female" value="female">Female
+                &nbsp;&nbsp;
+            </div>
+
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+
+    </div>
+
+</div>
+
+<!-- end abouts -->
+
+<!--our content -->
+<%-include("our_content.ejs")%>
+    <!--footer .-->
+    <%- include("footer.ejs")%> -->

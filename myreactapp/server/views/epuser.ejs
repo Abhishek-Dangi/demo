@@ -1,0 +1,65 @@
+<%- include("usernav.ejs")%>
+    <!--about page load-->
+
+    <!--login from start -->
+
+    <div class="row , about-search">
+        <div class="col-1"></div>
+        <div class="col-6 pt-4 mb-5" id="addsubcategory">
+            <h2>Edit Profile Here</h2>
+            <font style="color:blue; font-weight: 800; font-size: 16px;">
+                <%- output %>
+            </font>
+
+            <form method="post" action="/user/epuser">
+
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" value="<%- userDetails.name%>">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" readonly
+                        value="<%- userDetails.email%>">
+                </div>
+                <div class="mb-3">
+                    <label for="mobile" class="form-label">Mobile</label>
+                    <input type="text" class="form-control" id="mobile" name="mobile" value="<%- userDetails.mobile%>">
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">address</label>
+                    <textarea class="form-control" name="address" id="address"
+                        rows="3"><%- userDetails.address%></textarea>
+
+                </div>
+                <div>
+                    <label for="city" value="<%- userDetails.city%>">City:</label>
+                    <select class="form-control" id="city" name="city" aria-label="Default select example">
+                        <option>
+                            <%- userDetails.city%>
+                        </option>
+                        <option>Pune</option>
+                        <option>Indore</option>
+                        <option>Dewas</option>
+                        <option>Bhopal</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="check">Gender:</label>&nbsp;&nbsp;
+                    <input type="radio" name="gender" id="male" value="male" <%- m %>>Male
+                    &nbsp;&nbsp;
+                    <input type="radio" name="gender" id="female" value="female" <%- f %> >Female
+                    &nbsp;&nbsp;
+                </div>
+
+                <button type="submit" class="btn btn-success">Update</button>
+            </form>
+
+        </div>
+
+    </div>
+
+    <!--login from end -->
+
+    <!--footer .-->
+    <%- include("userfooter.ejs")%>

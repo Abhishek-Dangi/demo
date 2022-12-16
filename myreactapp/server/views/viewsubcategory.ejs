@@ -1,0 +1,60 @@
+<!-- end loader -->
+<%- include("usernav.ejs")%>
+    <!--about page load-->
+    <!-- about  -->
+
+    <div id="about" class="about-search">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
+                    <div class="about-box container p-5">
+                        <style>
+                            #cat_main {
+                                height: auto;
+                                width: 600px;
+                            }
+
+                            #cat_part {
+                                height: 150px;
+                                width: 200px;
+                                float: left;
+                            }
+                        </style>
+                        <p>Sub Catogery <%- catname %>
+                        </p>
+                        <center>
+                            <div id="cat_main" class="mt-5">
+                                <% for(let row of sclist){%>
+                                    <a href="">
+                                        <div id="cat_part">
+                                            <img src="../../uploads/subcategoryicons/<%- row.subcaticonname%>"
+                                                height="100px" width="100px" />
+                                            <br />
+                                            <b>
+                                                <%- row.subcatname%>
+                                            </b>
+                                        </div>
+                                    </a>
+                                    <% }%>
+                            </div>
+
+                        </center>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4" style="border-left: 2px solid black ;">
+                    <% for(let c of clist) {%>
+                        <li>
+                            <a href="/user/viewsubcategory/<%- c.catname %>">
+                                <%- c.catname%>
+                            </a>
+                        </li>
+                        <%}%>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- end abouts -->
+
+    <!--footer .-->
+    <%- include("userfooter.ejs")%>

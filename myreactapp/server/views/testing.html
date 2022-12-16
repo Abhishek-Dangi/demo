@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="post" action="/register">
+
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+        </div>
+
+        <div class="mb-3">
+            <label for="pwd" class="form-label">Password</label>
+            <input type="password" class="form-control" id="pwd" name="password" placeholder="enter password">
+        </div>
+        <div class="mb-3">
+            <label for="mobile" class="form-label">Mobile</label>
+            <input type="text" class="form-control" id="mobile" name="mobile" placeholder="enter mobile">
+        </div>
+        <div class="mb-3">
+            <label for="Textarea" class="form-label">address</label>
+            <textarea class="form-control" id="address" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="city">City:</label>
+            <select>
+                <option>Select City</option>
+                <option>Pune</option>
+                <option>Indore</option>
+                <option>Dewas</option>
+                <option>Bhopal</option>
+            </select>
+        </div>
+        <div>
+            <label for="check">Gender:</label>&nbsp;&nbsp;
+            <input type="radio" name="gender" id="male" value="male">Male
+            &nbsp;&nbsp;
+            <input type="radio" name="gender" id="female" value="female">Female
+            &nbsp;&nbsp;
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+    </div>
+    </div>
+</body>
+
+</html>

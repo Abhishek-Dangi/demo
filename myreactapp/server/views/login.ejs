@@ -1,0 +1,42 @@
+<%- include("nav.ejs")%>
+    <%- include("header.ejs")%>
+        <!--about page load-->
+
+        <!--login from start -->
+
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-6" id="register_from">
+                <h2>Login here!!</h2>
+                <font style="color:blue; font-weight: 800; font-size: 16px;">
+                    <%- output %>
+                </font>
+                <form method="post" action="/login">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" value="<%- cunm %>">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="pwd" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="pwd" name="password" value="<%- cpass %>">
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="checkbox" id="chk" name="chk" value="remember">
+                        <label>Remember me?</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-success">Login</button>
+                </form>
+
+            </div>
+
+        </div>
+
+        <!--login from end -->
+        <!--our content -->
+        <%-include("our_content.ejs")%>
+
+            <!--footer .-->
+            <%- include("footer.ejs")%>
